@@ -23,18 +23,18 @@
         </div>
         <div>
             <label>TGL LAHIR</label>
-            <input type="date" name="TGLLAHIR">
+            <input type="date" name="TGL_LAHIR">
         </div>
         <div>
             <label>JENIS KELAMIN</label>
-            <select name="JK">
+            <select name="JENISKEL">
                 <option disable>Pilih Jenis Kelamin</option>
                 <option value="L">Laki-Laki</option>
                 <option value="P">Perempuan</option>
             </select>
         </div>
         <div>
-            <button type="text">SUBMIT</button>
+            <button type="SUBMIT" name="SIMPANDATA">Simpan Data</button>
         </div>
 
 

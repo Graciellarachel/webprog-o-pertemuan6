@@ -1,7 +1,17 @@
 <?php
     include_once("konfigurasi.php");
+    if(!isset($_POST["SIMPANDATA"])){
+        die();
+    }
+#kalau tidak ada ! maka page ini diakses ya stop
 
-    $sql = "INSERT INTO mhs(NIM, NAMA, ALAMAT, TGL_LAHIR, JENIS_KELAMIN) VALUES ('1122331122', 'kimja', 'Jl. Tukad Pakerisan', '1999-01-01', 'P');";
+    $txNIM = $_POST["NIM"];
+    $txNAMA = $_POST["NAMA"];
+    $txALAMAT = $_POST["ALAMAT"];
+    $txTGL = $_POST["TGL_LAHIR"];
+    $txJK = $_POST["JENISKEL"];
+
+    $sql = "INSERT INTO mhs(NIM, NAMA, ALAMAT, TGL_LAHIR, JENISKEL) VALUES ('$txNIM', '$txNAMA', '$txALAMAT', '$txTGL', '$txJK');";
 
     $res = mysqli_query($koneksi, $sql);
     if(!$res){
